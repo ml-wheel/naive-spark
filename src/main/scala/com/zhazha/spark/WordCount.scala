@@ -20,7 +20,7 @@ object WordCount extends App {
     .take(2)
     .foreach(println(_))
 
-  test("99")
+
 
   //  line =>
   //    println(line.getClass)
@@ -37,12 +37,14 @@ object WordCount extends App {
     tmp.substring(2)
   }
 
-  def xx(f:String=>Int,num:String="10"):Int={
-    f(num)
-  }
 
+
+  test("99")
   def test(num:String): Unit ={
     println(xx(num=>Integer.parseInt(num),num))
 
+  }
+  def xx(f:String=>Int,num:String="10"):Int={
+    f(num)
   }
 }

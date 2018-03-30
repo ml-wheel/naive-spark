@@ -204,6 +204,7 @@ public class JavaCode {
     }
 
     /**
+     * 单链表倒置
      * @param node
      * return
      * 迭代
