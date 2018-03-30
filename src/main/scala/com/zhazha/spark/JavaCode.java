@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Test {
+public class JavaCode {
     public static void main(String[] args) {
         int[] src = {6, 1, 3, 5, 4};
         quickSort(src, 0, src.length - 1);
