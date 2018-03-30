@@ -8,12 +8,18 @@ import java.util.Map;
 
 public class JavaCode {
     public static void main(String[] args) {
-        int[] src = {6, 1, 3, 5, 4};
-        quickSort(src, 0, src.length - 1);
-        System.out.println(binarySearch(src, 0, 4, 6));
+//        int[] src = {6, 1, 3, 5, 4};
+//        quickSort(src, 0, src.length - 1);
+//        System.out.println(binarySearch(src, 0, 4, 6));
+        for (int i = 1; i <= 100; i++) {
+            System.out.println(getFibonacciN(i));
+        }
     }
 
 
+    /**
+     * 这傻狗~
+     */
     static void stringIntern() {
         String str1 = new StringBuilder("ja").append("va").toString();
         String str2 = new StringBuilder("kaige").toString();
@@ -128,5 +134,92 @@ public class JavaCode {
         return -1;
     }
 
+
+    /**
+     * 斐波那契数列求值
+     * An  + An+1 = An+2
+     * 161已经是极限了,162会出现负数
+     * 160 : 8259707399215967867
+     * 161 : 9217463444206948445
+     * 162 : -969573230286635304
+     * 循环求值
+     */
+//    static long getFibonacciN(long n) {
+//        long a = 1;
+//        long b = 1;
+//        long c = 0;
+//        if (n <= 2) {
+//            return 1;
+//        } else {
+//            for (long x = 2; x < n; x++) {
+//                c = a + b;
+//                a = b;
+//                b = c;
+//            }
+//            return c;
+//        }
+//    }
+
+    /**
+     * 斐波那契数列求值
+     *
+     * @param n
+     * @return 递归求解
+     */
+    static long getFibonacciN(int n) {
+        if (n > 2) {
+            return getFibonacciN(n - 1) + getFibonacciN(n - 2);
+        } else if (n <= 2 && n >= 1) {
+            return 1l;
+        } else {
+            return -1l;
+        }
+
+    }
+
+    class Node {
+        int index;
+        Node next;
+
+        public Node(int index, Node next) {
+            this.index = index;
+            this.next = next;
+        }
+    }
+
+    /**
+     * 单链表倒置
+     *
+     * @param node
+     * @return 递归
+     */
+    static Node reverse(Node node) {
+        if (node.next == null) return node;
+        Node next = node.next;
+        node.next = null;
+        Node re = reverse(next);
+        next.next = node;
+        return re;
+
+    }
+
+    /**
+     * @param node
+     * return
+     * 迭代
+     */
+
+    static Node reverse1(Node node) {
+        Node prev = null;
+        Node now = node;
+        while (now != null) {
+            Node next = now.next;
+            now.next = prev;
+            prev = now;
+            now = next;
+        }
+
+        return prev;
+    }
 
 }
