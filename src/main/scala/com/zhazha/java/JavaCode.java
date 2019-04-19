@@ -1,4 +1,4 @@
-package com.zhazha.spark;
+package com.zhazha.java;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class JavaCode {
+
+    static int MAXIMUM_CAPACITY = 1 << 30;
+
+    static int tableSizeFor(int cap) {
+        int n = cap - 1;
+        n |= n >>> 1;
+        n |= n >>> 2;
+        n |= n >>> 4;
+        n |= n >>> 8;
+        n |= n >>> 16;
+        return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
+    }
+
     public static void main(String[] args) {
-//        int[] src = {6, 1, 3, 5, 4};
-//        quickSort(src, 0, src.length - 1);
-//        System.out.println(binarySearch(src, 0, 4, 6));
-        for (int i = 1; i <= 100; i++) {
-            System.out.println(getFibonacciN(i));
-        }
+        System.out.println(16 << 1);
     }
 
 
@@ -205,9 +213,9 @@ public class JavaCode {
 
     /**
      * 单链表倒置
-     * @param node
-     * return
-     * 迭代
+     *
+     * @param node return
+     *             迭代
      */
 
     static Node reverse1(Node node) {

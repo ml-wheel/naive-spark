@@ -1,9 +1,8 @@
 package com.zhazha.spark
 
 import org.apache.spark.{SparkConf, SparkContext}
-
 import scala.collection.Iterable
-import scala.reflect.ClassTag
+
 
 object WordCount extends App {
   StreamingExamples.setStreamingLogLevels()
@@ -19,7 +18,6 @@ object WordCount extends App {
     .sortBy(x => (x))
     .take(2)
     .foreach(println(_))
-
 
 
   //  line =>
@@ -38,13 +36,14 @@ object WordCount extends App {
   }
 
 
-
   test("99")
-  def test(num:String): Unit ={
-    println(xx(num=>Integer.parseInt(num),num))
+
+  def test(num: String): Unit = {
+    println(xx(num => Integer.parseInt(num), num))
 
   }
-  def xx(f:String=>Int,num:String="10"):Int={
+
+  def xx(f: String => Int, num: String = "10"): Int = {
     f(num)
   }
 }
