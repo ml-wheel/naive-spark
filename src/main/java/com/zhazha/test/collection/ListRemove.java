@@ -1,10 +1,10 @@
-package com.zhazha.java;
+package com.zhazha.test.collection;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class bug {
+public class ListRemove {
     public static void main(String[] args) {
 
         List<String> a = new ArrayList<>();

@@ -1,4 +1,4 @@
-package com.zhazha.java;
+package com.zhazha.test.tree;
 
 public class findPath {
     static class TreeData {

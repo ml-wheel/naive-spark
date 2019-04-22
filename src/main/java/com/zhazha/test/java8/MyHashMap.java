@@ -1,4 +1,4 @@
-package com.zhazha.java;
+package com.zhazha.test.java8;
 
 
 import java.util.Arrays;

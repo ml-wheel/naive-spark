@@ -1,9 +1,9 @@
-package com.zhazha.java;
+package com.zhazha.test.array;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FindArray {
+public class FindDoubleArray {
 
 
     /**

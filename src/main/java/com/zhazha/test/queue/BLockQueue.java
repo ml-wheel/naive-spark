@@ -1,4 +1,4 @@
-package com.zhazha.java;
+package com.zhazha.test.queue;
 
 import org.spark_project.jetty.util.ArrayQueue;
 

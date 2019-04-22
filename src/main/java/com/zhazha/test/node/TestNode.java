@@ -1,4 +1,4 @@
-package com.zhazha.java;
+package com.zhazha.test.node;
 
 class ListNode {
     int val;

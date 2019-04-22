@@ -1,4 +1,4 @@
-package com.zhazha.java;
+package com.zhazha.test.sort;
 
 public class QuickSort {
     public static void quickSort(int[] src, int begin, int end) {
